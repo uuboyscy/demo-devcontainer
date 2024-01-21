@@ -8,6 +8,5 @@ RUN apt-get update && \
     echo "Y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 RUN pip install --upgrade pip && \
-    pip install pipenv && \
-    pip install -r ./requirements-dev.txt
+    pip install pipenv
 
