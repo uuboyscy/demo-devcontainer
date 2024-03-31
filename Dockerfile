@@ -5,7 +5,7 @@ ENV TZ=Asia/Taipei
 COPY Pipfile .
 
 RUN apt-get update && \
-    apt-get install git zsh vim curl make jq procps gcc python3-dev -y && \
+    apt-get install git zsh vim curl wget zip make procps gcc python3-dev -y && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     echo "Y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
