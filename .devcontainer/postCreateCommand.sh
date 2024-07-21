@@ -11,7 +11,7 @@ sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="xiong-chiamiov-plus"/' /root/.zshr
 
 # cp /root/.gitconfig_mounted /root/.gitconfig \
 # && cp -r /root/.ssh_mounted/* /root/.ssh/ \
-# && chmod 400 /root/.ssh/id_rsa \
+# && ls /root/.ssh/id_* | grep -v pub | xargs chmod 400 \
 # && chmod 755 /root/.ssh/config
 
 git config --global --add safe.directory /workspaces/*
