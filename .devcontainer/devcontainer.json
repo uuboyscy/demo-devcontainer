@@ -5,20 +5,16 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "bierner.markdown-mermaid",
-        "charliermarsh.ruff",
+        "ms-python.python",
+        "streetsidesoftware.code-spell-checker",
         "donjayamanne.githistory",
         "eamodio.gitlens",
         "mhutchie.git-graph",
         "shardulm94.trailing-spaces",
-        "shinichi-takii.sql-bigquery",
-        "streetsidesoftware.code-spell-checker",
         "vivaxy.vscode-conventional-commits",
-        "ms-python.python",
+        "bierner.markdown-mermaid",
         "ms-python.black-formatter",
-        "ms-python.pylint",
-        "ms-python.isort",
-        "ms-toolsai.jupyter"
+        "ms-python.isort"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
@@ -26,15 +22,7 @@
         "editor.tabSize": 4,
         "editor.rulers": [
           100
-        ],
-        "[python]": {
-          "python.formatting.provider": "black",
-          "editor.codeActionsOnSave": {
-            "editor.formatOnSave": "always",
-            "source.unusedImports": "never",
-            "source.organizeImports": "always"
-          }
-        }
+        ]
       }
     }
   },
@@ -48,7 +36,7 @@
   "postCreateCommand": "sh ./.devcontainer/postCreateCommand.sh",
   "runArgs": [
     "--name",
-    "dev-${localEnv:USER}-${localEnv:USERNAME}-demo-devcontainer",
+    "demo-devcontainer",
     "--network",
     "host"
   ]
